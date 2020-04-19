@@ -43,12 +43,12 @@ hr {
 
 .about__socials i {
    margin: 0 10px;
-   color: #67dd3e;
+   color: #2c2c2c;
    font-size: 50px;
 }
 
 .about__link {
-   color: #67dd3e;
+   color: #2c2c2c;
    text-shadow: 0 1px 3px rgb(0, 0, 0, 0.2);
    display: flex;
    align-items: center;
