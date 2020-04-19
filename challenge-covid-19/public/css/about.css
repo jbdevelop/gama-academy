@@ -16,6 +16,10 @@ hr {
    align-items: center;      
 }
 
+.about__block {
+   display: flex;
+}
+
 .about__photo {
    display: flex;
    flex-direction: column;
@@ -53,9 +57,8 @@ hr {
 }
 
 .about__skills {
-   font-size: 25px;
-   border: 0px solid;
-   
+   font-size: 20px;
+   border: 0px solid;      
 }
 
 .about__p {

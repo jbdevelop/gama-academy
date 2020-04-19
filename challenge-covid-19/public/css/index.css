@@ -54,7 +54,7 @@ hr {
 }
 
 .topbar__menu {
-   font-size: 25px;      
+   font-size: 20px;      
 }
 
 .topbar__list {
@@ -90,14 +90,14 @@ hr {
 }
 
 .news__block iframe {
-   height: 260px;   
-   width: 385px;
+   width: 320px;
+   height: 240px;   
 }
 
 .news__block img {
    display: block;
-   width: 385px;
-   height: 260px;
+   width: 320px;
+   height: 240px;
 }
 
 .news__item {
@@ -162,7 +162,7 @@ footer {
 }
 
 .footer__text {
-   font-size: 20px;
+   font-size: 18px;
    color: #424242;
    font-weight: 500;
 }
@@ -174,6 +174,7 @@ footer {
 .footer__socials a {
    margin-left: 20px;   
    color:#2c2c2c;
+   font-size: 28px;
 }
 
 
