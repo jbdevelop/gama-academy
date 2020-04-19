@@ -40,6 +40,10 @@ hr {
    box-shadow: 0 1px 0 rgba(0,0,0, 0.1);
 }
 
+.topbar__logo {
+   display: flex;   
+}
+
 .topbar__logo-challenge {
    width: 200px;
 }
@@ -206,7 +210,7 @@ footer {
    .topbar__link, 
    .news__subtitle,
    .footer__text {
-      font-size: 18px;
+      font-size: 16px;
    }
 
    .news {      
