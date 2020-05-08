@@ -132,6 +132,11 @@ body {
   color: #67dd3e;  
 }
 
+.footer__nocopyright {
+  font-size: 11px;
+  color: #999;
+}
+
 .footer__text {    
   border: 1px solid black;
   display: flex;
