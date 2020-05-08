@@ -72,7 +72,8 @@ body {
   box-shadow: 0px 0px 5px rgba(0,0,0, 0.3);
   font-family: Montserrat;
   color: #222;
-  font-size: 14px;        
+  font-size: 14px;  
+  margin-left: 10px;      
 }
 
 /* remove arrows do input date */
