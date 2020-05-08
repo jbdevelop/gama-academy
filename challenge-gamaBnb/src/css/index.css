@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
+
+
+*, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat;
+  color: #484848;
+  font-family: 'Montserrat', sans-serif;    
+  padding-top: 90px;
+  padding-bottom: 50px;
+}
+
+.container{
+  border: 0px solid blueviolet;
+  width: 980px; 
+  display: flex;  
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;  
+  padding: 10px;
+}
+
+.top {  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0,0,0, 0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background:white;  
+}
+
+.top__right {
+  border: 0px solid;  
+  display: flex;  
+  align-items: center;
+}
+
+.top__logo-challenge {
+  width: 200px;
+}
+
+.top__logo-airbnb {  
+  width: 100px;
+  height: 30px;
+  margin-right: 30px;
+}
+
+.check {
+  width: 100%;
+  padding: 10px;
+  border: 0px solid gold;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0,0,0, 0.2);
+  text-align: center;
+  background: #fff;
+}
+
+.check__date {
+  margin-right: 30px;
+  border: none;
+  border-radius: 5px;
+  border: 0px solid gray;
+  padding: 10px;
+  box-shadow: 0px 0px 5px rgba(0,0,0, 0.3);
+  font-family: Montserrat;
+  color: #222;
+  font-size: 14px;        
+}
+
+/* remove arrows do input date */
+.check__date::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.check__submit {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  background: #67dd3e;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0,0,0, 0.3);
+
+}
+
+
+.card {  
+  box-shadow: 0 5px 5px rgba(0,0,0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.card__body img{
+  width: 300px;
+  height: 200px
+  
+}
+
+.card__bottom {  
+  height: 100px;
+}
+
+.card__bottom div {
+  margin: 12px;  
+}
+
+.footer {
+  padding: 10px;      
+  border: 0px solid goldenrod;
+  background: #222;  
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer__email {
+  text-decoration: none;
+  color: #67dd3e;  
+}
+
+.footer__text {    
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__socials a {
+  color: white;  
+}
+
+.footer__socials i {
+  font-size: 25px;  
+  margin: 0 5px;
+}
+
+
+/* PACE PLUGIN */ /* PACE PLUGIN */ /* PACE PLUGIN */ /* PACE PLUGIN */
+/* PACE PLUGIN */ /* PACE PLUGIN */ /* PACE PLUGIN */ /* PACE PLUGIN */
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  z-index: 2000;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #3f515b;
+
+  overflow: hidden;
+}
+
+.pace .pace-progress {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+
+  max-width: 200px;
+  position: fixed;
+  z-index: 2000;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  height: 100%;
+  width: 100%;
+  background: #3f515b;
+}
+
+.pace.pace-inactive {
+  display: none;
+}
