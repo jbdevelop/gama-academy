@@ -3,7 +3,7 @@ const fetchJSON = async (url) => await (await fetch(url)).json()
 function appendStays(json) {
   const stays = document.querySelector("#stays")  
   let container = ""      
-  let article = ""
+  let card = ""
 
   let aux = 1;
   for (let i=0; i<json.length; i++) {      
@@ -17,47 +17,49 @@ function appendStays(json) {
     const name = (capitalizeWords.length > 30 ? capitalizeWords.substring(0, 27) + "..." : capitalizeWords)
     
     if(aux % 3 === 0) {      
-      article += 
+      card += 
       `
-      <article class="card">      
-        <div class="card__body">
-          <img src=${json[i].photo} alt="">
-        </div>
-        <div class="card__bottom">
-          <div class="card__bottom-type">${json[i].property_type}</div>
-          <div class="card__bottom-description">${name}</div>
-          <div class="card__bottom-price">
-            <strong class="card__coin">R$</strong>
-            <strong class="card__pricePerDay">${json[i].price}</strong>
-            <strong class="card__priceTotal"></strong>
+      <a href="#" class="card__link" onclick="return false">
+        <article class="card">      
+          <div class="card__body">
+            <img src=${json[i].photo} alt="">
           </div>
-        </div>    
-      </article>   
+          <div class="card__bottom">
+            <div class="card__bottom-type">${json[i].property_type}</div>
+            <div class="card__bottom-description">${name}</div>
+            <div class="card__bottom-price">
+              <strong class="card__coin">R$</strong>
+              <strong class="card__pricePerDay">${json[i].price}</strong>
+              <strong class="card__priceTotal"></strong>
+            </div>
+          </div>    
+        </article> 
+      </a>  
       `
       container = document.createElement("div")
       container.className = "container"
-
-      container.innerHTML = article      
-      article = ""
-      //stays.innerHTML += container       
+      container.innerHTML = card      
+      card = ""      
       stays.appendChild(container)      
     } else {
-      article += 
+      card += 
       `
-      <article class="card">      
-        <div class="card__body">
-          <img src=${json[i].photo} alt="">
-        </div>
-        <div class="card__bottom">
-          <div class="card__bottom-type">${json[i].property_type}</div>
-          <div class="card__bottom-description">${name}</div>
-          <div class="card__bottom-price">
-            <strong class="card__coin">R$</strong>
-            <strong class="card__pricePerDay">${json[i].price}</strong>
-            <strong class="card__priceTotal"></strong>
+      <a href="#" class="card__link" onclick="return false">
+        <article class="card">      
+          <div class="card__body">
+            <img src=${json[i].photo} alt="">
           </div>
-        </div>    
-      </article>   
+          <div class="card__bottom">
+            <div class="card__bottom-type">${json[i].property_type}</div>
+            <div class="card__bottom-description">${name}</div>
+            <div class="card__bottom-price">
+              <strong class="card__coin">R$</strong>
+              <strong class="card__pricePerDay">${json[i].price}</strong>
+              <strong class="card__priceTotal"></strong>
+            </div>
+          </div>    
+        </article> 
+      </a>  
       `
     }
     aux++
