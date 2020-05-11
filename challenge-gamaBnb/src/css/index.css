@@ -13,7 +13,7 @@ body {
   color: #484848;
   font-family: 'Montserrat', sans-serif;    
   padding-top: 90px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
 }
 
 .container{
@@ -121,8 +121,7 @@ body {
   margin: 12px;  
 }
 
-.footer {
-  padding: 10px;      
+.footer {     
   border: 0px solid goldenrod;
   background: #222;  
   color: white;
