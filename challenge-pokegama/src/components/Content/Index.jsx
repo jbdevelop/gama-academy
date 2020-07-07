@@ -45,7 +45,7 @@ export default function Content() {
         )          
       });
 
-      let response = await axios.all(request);      
+      const response = await axios.all(request);      
 
       const pokemonsList = response.map(pokemon => {             
         return { 
