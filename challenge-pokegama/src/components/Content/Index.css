@@ -1,0 +1,20 @@
+.pokeList {
+
+}
+
+.list ul {
+  border: 1px solid violet;
+  margin-top: 50px;  
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.list li {
+  border: 1px solid black;
+  margin: 40px;
+}
+
+.list li img {
+  height: 8.5em;
+}
