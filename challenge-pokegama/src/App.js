@@ -1,39 +1,26 @@
-import React from "react"
+import React, {useState} from "react"
 
 import Topbar from "./components/Topbar/Index"
 import Content from "./components/Content/Index"
+import Cart from "./components/Cart/Index"
 
 import "./App.css"
 
-function App() {
+export default function App() {
+  const [itemCart, setItemCart] = useState([])
+
   return (
     <>  
       <div className="container">
+        
         <div className="content">
           <Topbar />
-          <Content />
+          <Content itemCart={itemCart} setItemCart={setItemCart} />
         </div>
-        <div className="cart">
-          <section>
-            <div className="card">
-              <h1 className="card__title">Carrinho</h1>
 
-              <div className="card__item">Item</div>
-              <div className="card__item">Item</div>
-              <div className="card__item">Item</div>
-
-              <div className="card__total">
-                <span className="card__total-text">Total</span>  
-                <span className="card__total-price">R$ 900</span>  
-              </div>
-
-              <button className="card__finish">Finalizar</button>
-            </div>
-          </section>
-        </div>
+        <Cart itemCart={itemCart} />
+      
       </div>
     </>
   )
 }
-
-export default App
