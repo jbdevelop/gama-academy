@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useGlobalState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 import "./Index.css"
 import api from "../../services/api"
@@ -8,8 +8,6 @@ import axios from 'axios'
 export default function Content({ itemCart, setItemCart }) {
 
   const [pokemons, setPokemons] = useState([])
-  //const [itemCart, setItemCart] = useState([])
-
 
   async function handleGetApi(query) {
     const { url, limit  } = query
@@ -40,15 +38,20 @@ export default function Content({ itemCart, setItemCart }) {
 
       const pokemonsList = response.map(pokemon => {             
         const price = Number((Math.random() * 500 + 1).toFixed(2))
+
+        const letter = pokemon.name[0].toUpperCase()
+
+        const word = pokemon.name.substr(1)
+
+        const name = letter + word
+
         return { 
           id: pokemon.id,
-          name: pokemon.name,
+          name,
           sprite: pokemon.sprites.front_default,
           price
         }        
       })
-      console.log('List', pokemonsList)
-
       const pokemonsListOk = pokemonsList.filter(pokemon => pokemon.sprite !== null)            
 
       setPokemons(pokemonsListOk)      
@@ -58,17 +61,10 @@ export default function Content({ itemCart, setItemCart }) {
 
   function handleAddToCart(event) {
     const id = Number(event.target.id)
-
-    //console.log('ID', id)  
-    //console.log('Lista pokemons', pokemons)
-    const item = pokemons.filter(pokemon => pokemon.id === id)   
     
-    console.log('ITEM', item)
+    const item = pokemons.filter(pokemon => pokemon.id === id)           
 
     setItemCart([...itemCart, item[0]])  
-    
-    //setTotalCart([])
-
   }
   
   return (   
@@ -79,7 +75,7 @@ export default function Content({ itemCart, setItemCart }) {
               <li key={index}>   
                 <div className="card">
                   <div className="card__content">
-                    <img src={pokemon.sprite}/>   
+                    <img src={pokemon.sprite} alt={pokemon.name}/>   
                     {pokemon.name}<br/>                    
                     <strong>{pokemon.price}</strong>                 
                   </div>                                      

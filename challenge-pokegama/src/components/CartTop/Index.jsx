@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 
 import "./Index.css"
 
-export default function Cart({ itemCart, setItemCart }) {
+export default function CartTop({ itemCart, setItemCart }) {
   const [totalCart, setTotalCart] = useState(0)
   //console.log('itemCart Cart', itemCart)
   
@@ -33,30 +33,30 @@ export default function Cart({ itemCart, setItemCart }) {
 
   return (
     <>  
-      <div className="cart">
+      <div className="cartTop">
         <section>
-          <div className="cart__container">
-            <h1 className="cart__title"><i className="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;</h1>
+          <div className="cartTop__container">
+            <h1 className="cartTop__title"><i className="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;</h1>
                       
-            <ul className="cart__list">
+            <ul className="cartTop__list">
               { itemCart.map((item, index) => (
-                  <li key={index} className="cart__item">
+                  <li key={index} className="cartTop__item">
                     <span>{item.name}</span>
                     <span>{Number((item.price).toFixed(2))} 
-                    &nbsp;&nbsp;<button className="cart__remove" onClick={handleRemoveItemCart} id={index}><i className="fa fa-close"></i></button>
+                    &nbsp;&nbsp;<button className="cartTop__remove" onClick={handleRemoveItemCart} id={index}><i className="fa fa-close"></i></button>
                     </span>                  
                   </li>                                              
                 )) 
               }
             </ul>
             
-            <div className="cart__total">
-              <span className="cart__total-text">Total</span>                                      
-              <span className="cart__total-price">{totalCart}</span>
+            <div className="cartTop__total">
+              <span className="cartTop__total-text">Total</span>                                      
+              <span className="cartTop__total-price">{totalCart}</span>
               
             </div>
 
-            <button className="cart__finish" onClick={handleBuyNow} disabled={ totalCart === '0.00' ? true : false }>
+            <button className="cartTop__finish" onClick={handleBuyNow} disabled={ totalCart === '0.00' ? true : false }>
               Buy Now
             </button>
           </div>
