@@ -1,13 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React, {useEffect} from 'react'
 
 import "./Index.css"
 import api from "../../services/api"
 import axios from 'axios'
 
 
-export default function Content({ itemCart, setItemCart }) {
-
-  const [pokemons, setPokemons] = useState([])
+export default function Content({ itemCart, setItemCart, pokemons, setPokemons, setPokemonsSave }) {  
 
   async function handleGetApi(query) {
     const { url, limit  } = query
@@ -54,10 +52,11 @@ export default function Content({ itemCart, setItemCart }) {
       })
       const pokemonsListOk = pokemonsList.filter(pokemon => pokemon.sprite !== null)            
 
-      setPokemons(pokemonsListOk)      
+      setPokemons(pokemonsListOk) 
+      setPokemonsSave(pokemonsListOk)     
     }
     getPokemonForm()          
-  }, [])
+  }, [setPokemons, setPokemonsSave])
 
   function handleAddToCart(event) {
     const id = Number(event.target.id)

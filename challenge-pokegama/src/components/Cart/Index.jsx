@@ -4,6 +4,8 @@ import Swal from 'sweetalert2'
 
 import "./Index.css"
 
+import imageCart from "../../assets/background1.png"
+
 export default function Cart({ itemCart, setItemCart }) {
   const [totalCart, setTotalCart] = useState(0)
   //console.log('itemCart Cart', itemCart)
@@ -31,6 +33,10 @@ export default function Cart({ itemCart, setItemCart }) {
     setItemCart([])
   }
 
+  function handleCleanCart() {
+    setItemCart([])
+  }
+
   return (
     <>  
       <div className="cart">
@@ -43,7 +49,7 @@ export default function Cart({ itemCart, setItemCart }) {
                   <li key={index} className="cart__item">
                     <span>{item.name}</span>
                     <span>{Number((item.price).toFixed(2))} 
-                    &nbsp;&nbsp;<button className="cart__remove" onClick={handleRemoveItemCart} id={index}><i className="fa fa-close"></i></button>
+                    <button className="cart__remove" onClick={handleRemoveItemCart} id={index}><i className="fa fa-close"></i></button>
                     </span>                  
                   </li>                                              
                 )) 
@@ -56,11 +62,19 @@ export default function Cart({ itemCart, setItemCart }) {
               
             </div>
 
+            <button className="cart__clean" onClick={handleCleanCart}>
+              Empty Cart
+            </button>
             <button className="cart__finish" onClick={handleBuyNow} disabled={ totalCart === '0.00' ? true : false }>
               Buy Now
             </button>
+
           </div>
         </section>
+
+        <div className="cart__image">
+            <img src={imageCart} alt="Charizard"/>
+        </div>
       </div>
     </>
   )

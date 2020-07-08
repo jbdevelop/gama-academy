@@ -1,15 +1,24 @@
 
 .cart {
-  border: 0px solid tomato;
-  width: 400px;   
-  background-color: #ddd;
+  border: 0px solid tomato; 
+  background-color: #ffe1a5;  
+  min-width: 300px;
   position: sticky;  
+  overflow: auto;
+  overflow-x: hidden;
   top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;  
 }
 
 .cart__container {
   border: 0px solid lightseagreen; 
   padding: 10px; 
+  width: 300px;
+  
 }
 
 .cart__title {
@@ -36,7 +45,8 @@
 .cart__remove {
   color: white;
   background-color: firebrick;
-  cursor: pointer;
+  cursor: pointer;  
+  margin-left: 5px; 
 }
 
 .cart__total {
@@ -57,6 +67,20 @@
   background: firebrick;
   color: white;
   font-weight: bold;
+}
+
+.cart__clean {
+  padding: 10px;
+  width: 100%;
+  font-size: 1.0em;
+  cursor: pointer;
+  color: #222;
+  font-weight: bold;
+}
+
+
+.cart__image {
+  opacity: .4;
 }
 
 @media screen and (max-width: 600px) {

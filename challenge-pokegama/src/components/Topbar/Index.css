@@ -28,4 +28,7 @@
   width: 100%;
 }
 
-
+.topbar__img {   
+  border: 0px solid black;
+  height: 40px;
+}

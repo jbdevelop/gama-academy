@@ -6,8 +6,7 @@ import "./Index.css"
 
 export default function CartTop({ itemCart, setItemCart }) {
   const [totalCart, setTotalCart] = useState(0)
-  //console.log('itemCart Cart', itemCart)
-  
+ 
   useEffect(() => {
     const total = itemCart.reduce((accum, { price }) => accum + price, 0)
     setTotalCart(total.toFixed(2))
